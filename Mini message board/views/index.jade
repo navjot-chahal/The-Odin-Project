@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    div
+      - messages.map((el) => {
+        div
+          p= "User: " + el.user
+        div
+          p= "Text: " + el.text
+        div
+          p= "Date: " + el.added 
+        div --------------
+      - })
+    h2 Add new message 
+      a(href="/new")
+        button Add
+        
+
+
